@@ -1,0 +1,43 @@
+#ifndef SETTINGS_H
+#define SETTINGS_H
+
+#include <string>
+
+class Settings 
+{
+public:
+    // For Database
+    std::string db_host = "localhost";
+    std::string db_user = "smart_medical_box";
+    std::string db_password = "123456";
+    std::string db_name = "SMB";
+
+    // I2c address of clock ic (pcf2129)
+    int pcf2129_rtc_address = 0x51;
+
+    // I2c address of servo control ic (pca9685)
+    int pca9685_address = 0x40;
+    int servo_angle_closed  = 10;
+    int servo_angle_open    = 170;
+
+    int morning_pwm = 0;
+    int midday_pwm = 1;
+    int evening_pwm = 2;
+    int night_pwm = 3;
+    int insulin_day_pwm = 4;
+    int insulin_night_pwm = 5;
+    int gps_dtr = 6; 
+    int buzzer = 7;
+    int power_monday = 11;
+    int power_tuesday = 10;
+    int power_wednesday = 9;
+    int power_thursday = 8;
+    int power_friday = 14;
+    int power_saturday = 13;
+    int power_sunday = 12;
+    int power_insulin = 15;
+
+    Settings();
+};
+
+#endif // SETTINGS_H
