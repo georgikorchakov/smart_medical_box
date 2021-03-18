@@ -1,9 +1,9 @@
 #include "ui_communication.h"
 
-UICommunication::UICommunication()
+UICommunication::UICommunication(std::string socket_address)
     : __context{1}, __socket{__context, ZMQ_REP}
 {
-    __socket.bind ("tcp://*:5555");
+    __socket.bind (socket_address);
     __items[0] = {static_cast<void*>(__socket), 0, ZMQ_POLLIN, 0};
 }
 

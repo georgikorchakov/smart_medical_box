@@ -4,7 +4,7 @@
 
 int main()
 {
-	UICommunication ui;
+	UICommunication ui("tcp://*:5555");
 
 	while (1)
 	{
@@ -13,7 +13,6 @@ int main()
 			std::cout << "REQ: " << ui.get_command() << "\n";
 			ui.send_command("WORLD");
 		}
-
 		std::cout << "Do some work\n";
 	}
 

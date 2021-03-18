@@ -14,7 +14,7 @@ private:
     zmq::pollitem_t __items[1];
 
 public:
-    UICommunication();
+    UICommunication(std::string socket_address);
     int is_req_waiting();
     std::string get_command();
     void send_command(std::string command);
