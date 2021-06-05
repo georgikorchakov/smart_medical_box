@@ -7,9 +7,8 @@
 class I2C
 {
 private:
-    const int m_address;
-    int m_fd;
-
+    int __fd;
+    int __address;
 public:
     I2C(int address);
 

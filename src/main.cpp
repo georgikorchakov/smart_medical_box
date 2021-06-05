@@ -7,10 +7,7 @@ int main()
     Settings settings;
     SmartMedicalBox smb(settings);
 
-    while (1)
-    {
-        smb.checkTimeAndOpenBox();
-    }
+    smb.start();
 
     return 0;
 }

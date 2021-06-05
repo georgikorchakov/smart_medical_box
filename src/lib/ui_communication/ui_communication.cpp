@@ -1,4 +1,4 @@
-#include "ui_communication.h"
+#include "./ui_communication.h"
 
 UICommunication::UICommunication(std::string socket_address)
     : __context{1}, __socket{__context, ZMQ_REP}

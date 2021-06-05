@@ -18,7 +18,7 @@ public:
     // I2c address of servo control ic (pca9685)
     int pca9685_address = 0x40;
     int servo_angle_closed  = 10;
-    int servo_angle_open    = 170;
+    int servo_angle_open    = 150;
 
     int morning_pwm = 0;
     int midday_pwm = 1;
@@ -36,6 +36,9 @@ public:
     int power_saturday = 13;
     int power_sunday = 12;
     int power_insulin = 15;
+
+    // UI
+    std::string ui_socket_address = "tcp://*:5555";
 
     Settings();
 };

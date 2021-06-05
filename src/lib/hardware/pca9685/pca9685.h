@@ -119,20 +119,20 @@
 class PCA9685
 {
 private:
-    I2C m_i2c;
-    int m_frequency;
+    I2C __i2c;
+    int __frequency;
 
-    int m_angle_closed;
-    int m_angle_open;
+    int __angle_closed;
+    int __angle_open;
 
-    int m_pin_states[16];
+    int __pin_states[16];
     
     // ---------- Utils ----------
-    bool isValidPinNumber(int pin_number);
-    int  getPinOnLAddress(int pin_number);
-    int  getPinOnHAddress(int pin_number);
-    int  getPinOffLAddress(int pin_number);
-    int  getPinOffHAddress(int pin_number);
+    bool __isValidPinNumber(int pin_number);
+    int  __getPinOnLAddress(int pin_number);
+    int  __getPinOnHAddress(int pin_number);
+    int  __getPinOffLAddress(int pin_number);
+    int  __getPinOffHAddress(int pin_number);
 
 public:
     PCA9685(int address, int frequency=50);
@@ -149,7 +149,6 @@ public:
     void setServoBorders(int angle_closed, int angle_open);
     void openServo(int pin_number);
     void closeServo(int pin_number);
-    void closeAllServos();
 
     int getCurrentAngleForServo(int pin_number);
     int isServoOpen(int pin_number);

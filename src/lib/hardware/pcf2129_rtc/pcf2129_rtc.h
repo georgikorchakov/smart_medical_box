@@ -39,7 +39,7 @@
 class PCF2129RTC
 {
 private:
-    I2C m_i2c;
+    I2C __i2c;
     int bcd2dec(int bcd);
     int dec2bcd(int dec);
 public:
@@ -59,10 +59,10 @@ public:
     void setDayOfMonth(int day_of_month);
     void setMonth(int month);
     void setYear(int year); 
+    void setDayOfWeek(int day_of_week);
 
     void setTime(int hour, int minutes, int seconds=0);
     void setDate(int day_of_month, int month, int year);
-    void setDayOfWeek(int day_of_week);
 };
 
 #endif // PCF2129_RTC_H

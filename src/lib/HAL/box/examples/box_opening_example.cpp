@@ -2,11 +2,11 @@
 #include <iostream>
 #include <wiringPi.h>
 #include "../../../../config/settings.h"
-#include "../box_opening.h"
+#include "../box.h"
 
 int main()
 {
-    BoxOpening box(settings::pca9685_address, 30, 140);
+    Box box(settings::pca9685_address, 30, 140);
 
     box.setPowerControlPin(0, settings::power_monday);
     box.setPowerControlPin(1, settings::power_tuesday);
